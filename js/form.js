@@ -3,6 +3,7 @@ function sendForm(event) {
 
     $('#msg-recaptcha').css('display', 'none');
     $('#recaptcha').val(grecaptcha.getResponse());
+    grecaptcha.reset();
     $('.alert').css('display', 'none');
     $.ajax({
         type: 'POST',
