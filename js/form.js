@@ -6,7 +6,7 @@ function sendForm(event) {
     $('.alert').css('display', 'none');
     $.ajax({
         type: 'POST',
-        url: 'http://apiconsuti.herokuapp.com/email/send/',
+        url: 'https://apiconsuti.herokuapp.com/email/send/',
         data: $('form').serialize(),
         crossDomain: true,
         headers:{    
