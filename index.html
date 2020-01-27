@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>ConsuTI | Crie o seu MVP</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logotipo.png" width="150" alt="">
+        </a>
+        <a href="#main" id="btn-entre-contato" class="btn scrollsuave">
+            Entre em contato
+        </a>
+    </nav>
+
+    <div class="container">
+        <section id="banner">
+            <img src="assets/banner.jpg" alt="Banner">
+            <div class="legend">
+                <h1>Crie o seu MVP <br> com a <span>ConsuTI</span></h1>
+            </div>
+        </section>
+        <section id="main">
+            <div class="col-12 col-sm-6">
+                <div id="text-container">
+                    <p>
+                        Procurando o <strong>Time ágil</strong> para construir o seu produto?
+                    </p>
+
+                    <p>
+                        A sua startup deseja desenvolver o <strong>MVP</strong>?
+                    </p>
+
+                    <p>
+                        A ConsuTI é especialista no desenvolvimento para startups e está aqui para <strong>transformar as ideias
+                        em realidade</strong>, por meio da tecnologia, desenvolvendo softwares, com qualidade, agilidade e
+                        velocidade na entrega.
+                    </p>
+
+                    <p>
+                        O nosso Time tem alta capacidade de execução e nós construímos, juntos, novas oportunidades de
+                        realização para pessoas e negócios.
+                    </p>
+
+                    <p>
+                        Então, se você quer desenvolver o seu produto, o seu MVP, aqui você terá muito mais que um
+                        desenvolvedor: terá o nosso Time inteiro para realizar!
+                    </p>
+
+                    <p>
+                        Tenha o seu projeto executado por especialistas que já desenvolveram startups premiadas e
+                        investidas com recursos públicos e privados.
+                    </p>
+
+                    <p>
+                        Entre em contato conosco, pois estamos prontos para criar a solução para você e para o seu
+                        negócio
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="form-container">
+                    <form class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="nome_completo">Seu Nome Completo <span class="red">*</span></label>
+                                <input type="text" class="form-control"
+                                    placeholder="Digite o seu nome completo" name="name" id="nome_completo" required>
+                                <div class="valid-feedback">
+                                    Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Preencha o seu nome.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="nome_startup">Nome da Startup <span class="red">*</span></label>
+                                <input type="text" placeholder="Digite o nome da sua Startup" class="form-control"
+                                    name="name_startup" id="nome_startup" required>
+                                <div class="valid-feedback">
+                                    É um belo nome!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Preencha o nome da Startup.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="email">E-mail <span class="red">*</span></label>
+                                <input type="email" class="form-control"
+                                    placeholder="Entraremos em contato com você por ele" name="email" id="email"
+                                    required>
+                                <div class="valid-feedback">
+                                    Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Preencha um email válido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="telefone">Seu telefone (Com DDD) <span class="red">*</span></label>
+                                <input type="tel" class="form-control tel" placeholder="Digite o seu telefone"
+                                    name="telefone" id="telefone" minlength="14" required>
+                                <div class="valid-feedback">
+                                    Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Preencha o telefone.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="informacoes">Conte-nos um pouco mais <span class="red">*</span></label>
+                                <textarea type="text" class="form-control"
+                                    placeholder="Conte-nos sobre sua Startup, sobre suas ideias, sobre seu MVP..."
+                                    name="informacoes" id="informacoes" required></textarea>
+                                <div class="valid-feedback">
+                                    Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                    É importante para o seu sucesso nos contar um pouco sobre vocês.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="fase_startup">Fase da Startup <span class="red">*</span> </label>
+                                <select class="custom-select" name="fase_startup" id="fase_startup" required>
+                                    <option selected disabled value="">Escolha...</option>
+                                    <option value="Não Sei">Não Sei</option>
+                                    <option value="Ideação">Ideação</option>
+                                    <option value="Validação">Validação</option>
+                                    <option value="Tração">Tração</option>
+                                    <option value="Escalada">Escalada</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Rumo ao sucesso!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Selecionaem que fase sua startup está.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g-recaptcha" id="recaptcha" data-sitekey="6LepnEoUAAAAABnrq_0JEnLinvrkIiexujOc6ZhJ"></div>
+                        <button class="btn btn-primary" type="submit" title="Enviar Formulário">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="info">
+            <h1>Saiba mais sobre a ConsuTI e conheça os cases de sucesso!</h1>
+        </section>
+
+        <section id="footer">
+            <div id="footer-content">
+                <div class="col-12 col-md-6">
+                    <div class="media">
+                        <ion-icon name="map"></ion-icon>
+                        <a href="https://goo.gl/maps/pFHykkD2FM3yQBsH7" target="_blank">Rua Paraíba, nº 330, 18º andar,
+                            Funcionários, Belo Horizonte, MG, Brasil.</a>
+                    </div>
+                    <div class="media">
+                        <ion-icon name="mail"></ion-icon>
+                        <a href="mailto:consuti@consuti.com.br"> consuti@consuti.com.br</a>
+                    </div>
+                    <div class="media">
+                        <ion-icon name="call"></ion-icon>
+                        <a href="#"> + 55 (31) 98659-1307</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="media">
+                        <ion-icon name="globe"></ion-icon>
+                        <a href="http://consuti.com.br/">Nosso Site</a>
+                    </div>
+                    <div class="media">
+                        <ion-icon name="briefcase"></ion-icon>
+                        <a href="https://jobs.solides.com/grupoconsuti/" target="_blank">Trabalhe conosco</a>
+                    </div>
+                    <div class="media">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <a href="https://www.linkedin.com/company/consuti-net/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="media">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <a href="https://www.facebook.com/consuti/" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" style="display: flex; justify-content: center; margin-top: 30px;">
+                <a class="feito-carinho" href="http://consuti.com.br/" target="_blank">Feito com <span
+                        class="red">❤</span> por ConsuTI - 2020</a>
+            </div>
+        </section>
+    </div>
+
+    <div id="alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Sucesso!</strong> Analisaremos sua proposta e em breve entraremos em contato com você.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div id="alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Ops!</strong> Algo não ocorreu conforme o esperado, tente novamente mais tarde ou entre em contato conosco.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/form.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+        // Mascaras
+        $(document).ready(function () {
+            $('.tel').mask('(00) 00000-0000');
+            // $('.alert').alert('close');
+        });
+
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        else {
+                            sendForm(event);
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+</body>
+
+</html>
