@@ -10,7 +10,7 @@ function sendForm(event) {
         data: $('form').serialize(),
         dataType: 'JSON',
         success: function (result) {
-            if(result.includes('success')) {
+            if (result.includes('success')) {
                 $('form')[0].reset();
                 $('form').removeClass('was-validated');
                 $('#alert-success').css('display', 'flex');
@@ -24,8 +24,9 @@ function sendForm(event) {
         error: function (error) {
             $('#alert-danger').css('display', 'flex');
         },
-        complete: function() {
+        complete: function () {
             grecaptcha.reset();
+            $('#recaptcha').val("");
         }
     });
 }
