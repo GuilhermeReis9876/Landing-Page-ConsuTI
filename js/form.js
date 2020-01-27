@@ -5,7 +5,7 @@ function sendForm(event) {
     $('.alert').css('display', 'none');
     $.ajax({
         type: 'POST',
-        url: 'http://localhost:5000/email/send/',
+        url: 'https://apiconsuti.netilify.com/email/send/',
         data: $('form').serialize(),
         dataType: 'JSON',
         success: function (result) {
