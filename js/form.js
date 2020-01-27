@@ -6,12 +6,12 @@ function sendForm(event) {
     $('.alert').css('display', 'none');
     $.ajax({
         type: 'POST',
-        url: 'https://apiconsuti.herokuapp.com/email/send/',
+        url: 'http://apiconsuti.herokuapp.com/email/send/',
         data: $('form').serialize(),
         crossDomain: true,
         headers:{    
             'Accept': 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded;',
+            'Content-Type': 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, HEAD, OPTIONS',
             'Access-Control-Allow-Origin': '*' 
         },
