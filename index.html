@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>ConsuTI | Crie o seu MVP</title>
 </head>
 
@@ -44,8 +44,10 @@
                     </p>
 
                     <p>
-                        A ConsuTI é especialista no desenvolvimento para startups e está aqui para <strong>transformar as ideias
-                        em realidade</strong>, por meio da tecnologia, desenvolvendo softwares, com qualidade, agilidade e
+                        A ConsuTI é especialista no desenvolvimento para startups e está aqui para <strong>transformar
+                            as ideias
+                            em realidade</strong>, por meio da tecnologia, desenvolvendo softwares, com qualidade,
+                        agilidade e
                         velocidade na entrega.
                     </p>
 
@@ -73,12 +75,13 @@
             </div>
             <div class="col-12 col-sm-6">
                 <div class="form-container">
-                    <form class="needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+                    <form id="form" name="form" class="needs-validation" method="POST" enctype="multipart/form-data"
+                        novalidate>
                         <div class="form-row">
                             <div class="col-12">
                                 <label for="nome_completo">Seu Nome Completo <span class="red">*</span></label>
-                                <input type="text" class="form-control"
-                                    placeholder="Digite o seu nome completo" name="name" id="nome_completo" required>
+                                <input type="text" class="form-control" placeholder="Digite o seu nome completo"
+                                    name="name" id="nome_completo" required>
                                 <div class="valid-feedback">
                                     Parece bom!
                                 </div>
@@ -160,8 +163,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="g-recaptcha" id="recaptcha" data-sitekey="6LepnEoUAAAAABnrq_0JEnLinvrkIiexujOc6ZhJ"></div>
-                        <button class="btn btn-primary" type="submit" title="Enviar Formulário">Enviar</button>
+                        <div id="recaptcha" class="g-recaptcha" data-sitekey="6LepnEoUAAAAABnrq_0JEnLinvrkIiexujOc6ZhJ"></div>
+                        <input type="hidden" id="g_recaptcha_response" name="g_recaptcha_response"/>
+                        <div id="msg-recaptcha" class="invalid-feedback">
+                            Faça a validação do recaptcha.
+                        </div>
+                        <button class="btn btn-primary" id="enviar" type="submit" title="Enviar Formulário" disabled>Enviar</button>
                     </form>
                 </div>
             </div>
@@ -216,14 +223,15 @@
     <div id="alert-success" class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Sucesso!</strong> Analisaremos sua proposta e em breve entraremos em contato com você.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span>
         </button>
     </div>
 
     <div id="alert-danger" class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Ops!</strong> Algo não ocorreu conforme o esperado, tente novamente mais tarde ou entre em contato conosco.
+        <strong>Ops!</strong> Algo não ocorreu conforme o esperado, tente novamente mais tarde ou entre em contato
+        conosco.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span>
         </button>
     </div>
 
@@ -241,10 +249,18 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <script>
-        // Mascaras
         $(document).ready(function () {
             $('.tel').mask('(00) 00000-0000');
-            // $('.alert').alert('close');
+        
+        });
+
+        $(window).on('load', function() {
+            $('#enviar').prop('disabled', false);
+            var recaptcha = document.forms["form"]["g-recaptcha-response"];
+            recaptcha.required = true;
+            recaptcha.oninvalid = function (e) {
+                $('#msg-recaptcha').css('display', 'flex');
+            }
         });
 
         (function () {
