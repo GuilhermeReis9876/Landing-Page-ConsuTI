@@ -3,7 +3,6 @@ function sendForm(event) {
 
     $('#msg-recaptcha').css('display', 'none');
     $('#recaptcha').val(grecaptcha.getResponse());
-    grecaptcha.reset();
     $('.alert').css('display', 'none');
     $.ajax({
         type: 'POST',
@@ -25,5 +24,8 @@ function sendForm(event) {
         error: function (error) {
             $('#alert-danger').css('display', 'flex');
         },
+        complete: function() {
+            grecaptcha.reset();
+        }
     });
 }
