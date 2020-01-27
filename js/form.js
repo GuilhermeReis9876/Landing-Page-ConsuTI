@@ -11,7 +11,8 @@ function sendForm(event) {
         crossDomain: true,
         headers:{    
             'Accept': 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;',
+            'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, HEAD, OPTIONS',
             'Access-Control-Allow-Origin': '*' 
         },
         dataType: 'JSON',
