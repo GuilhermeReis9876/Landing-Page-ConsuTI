@@ -197,7 +197,7 @@ ion-icon {
     color: red;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 720px) {
     .container {
         width: 100% !important;
         padding: 0 !important;
@@ -210,7 +210,7 @@ ion-icon {
     }
     #banner img {
         width: 100%;
-        height: 300px;
+        height: auto;
     }
     .legend {
         position: relative;
@@ -229,24 +229,30 @@ ion-icon {
     }
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px var(--consuticolor);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+@media(max-width: 410px) {
+    #rc-imageselect, .g-recaptcha {
+        transform: scale(0.77);
+        -webkit-transform: scale(0.77);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
 }
 
-::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--consuticolor);
+    border-radius: 10px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px var(--consuticolor);
-	background-color: var(--consuticolor);
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px var(--consuticolor);
+    background-color: var(--consuticolor);
 }
 
 .alert-dismissible {

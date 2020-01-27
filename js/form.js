@@ -8,7 +8,7 @@ function sendForm(event) {
         type: 'POST',
         url: 'https://apiconsuti.herokuapp.com/email/send/',
         data: $('form').serialize(),
-        dataType: 'JSON',
+        dataType: 'JSONP',
         success: function (result) {
             if (result.includes('success')) {
                 $('form')[0].reset();
